@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitālais Portfolio Laine</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+ 
+        body {
+            background-color: #bdc1ca;
+            transition: background-color 1s ease-in-out;
+        }
+       
+        .Laine {
+        position: absolute;
+        font-family:Garamond, serif;
+        font-size: 95px;
+        top: 40px;
+        right: 25vw;
+        margin-right: 40px;
+        color: #233660;
+        }
+ 
+        @media  (max-width: 1300px) {
+        .Laine {
+        font-size: 80px;
+        margin-right: 5px;
+        }}
+
+        @media  (max-width: 1100px) {
+            .Laine {
+        font-size: 75px;
+        margin-right: -10px;
+        }}
+
+        @media (max-width: 1000px) {
+            .Laine {
+        font-size: 90px;
+        z-index: 1;
+        text-align: center;
+        color: #233660;   
+        left: 50%;
+        margin-right: -500px;
+        transform: translateX(-50%);
+        margin-top: 33vw;
+         }}
+
+         @media (max-width: 600px) {
+            .Laine {
+        margin-top: 200px;
+        font-size: 85px;
+            }}
+
+            @media (max-width: 500px) {
+            .Laine {
+        font-size: 60px;
+            }}
+
+        .container_slid {
+            background-color: #52322d;
+            height: 480px;
+            width: 80vw;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .web {
+            background-color: #ffffff;
+            height: 2900px;
+            width: 80vw;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding-top: 200px;
+        }
+
+        
+ 
+        @media (max-width: 1000px) {
+            .container_slid {
+        width: 100%;
+        height: 378px;
+        border-radius: 0;
+    }}
+ 
+        @media (max-width: 1000px) {
+            .web {
+        width: 100%;
+        height: 3400px;
+        margin: 0;
+        border-radius: 0;
+    }}
+    
+    @media (max-width: 670px) {
+            .web{
+        height: 3300px;
+        }}
+
+ 
+        /* Slīdošo attēlu konteiners */
+        .slider {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            position: absolute;
+            width: max-content;
+            height: 250px;
+            animation: slideAnimation 25s linear infinite;
+            animation-play-state: running;
+        }
+ 
+        /* Slīdošie attēli */
+        .slide {
+            width: 370px;
+            height: 450px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-top: 230px;
+            flex-shrink: 0;
+            transition: transform 0.5s ease, opacity 0.4s ease;
+            
+        }
+ 
+        @media (max-width: 1000px) {
+            .slide {
+            width: 270px;
+            height: 350px;
+            margin-top: 190px;
+    }}
+ 
+    @media (max-width: 1000px) {
+    .slider {
+        height: 188px;
+        }}
+ 
+        /* Animācija */
+        @keyframes slideAnimation {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(calc(-50% - 15px)); /* Pārvietojas par pusi, lai veidotos nepārtraukta kustība */
+            }}
+
+            .slider:hover {
+        animation-play-state: paused;
+        opacity: 1;
+        }
+ 
+        /* When hovering over the entire slider, dim all slides */
+            .slider:hover .slide {
+        opacity: 0.5;
+        animation-play-state: paused;
+        }
+
+        /* But keep the hovered slide at full opacity */
+            .slider:hover .slide:hover {
+        opacity: 1;
+        }
+ 
+        .header {
+            background-color: #bdc1ca;
+            padding: 1vw;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            position: relative;
+            z-index: 100;
+            transition: all 0.3s ease; /* smooth transition */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+ 
+        .header.scrolled {
+            padding: 0.5vw 1vw; /* smaller padding when scrolled */
+        }
+ 
+            .web, .container_slid {
+            position: relative;
+            z-index: 1; /* This keeps them behind the header */
+        }
+ 
+       .Unico_L {
+            display: block;
+            height: 150px;
+            transition: all 0.3s ease;
+            align-items: center;
+       }
+ 
+       .header.scrolled .Unico_L {
+            height: 80px; /* shrink the logo */
+        }
+ 
+       @media (max-width: 1000px) {
+            .Unico_L {
+        display: block;
+        height: 100px;
+    }}
+ 
+            .desrow {
+        position: relative;
+        width: 100vw;
+        height: 60%;
+    }
+ 
+            .designer1 {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background-color: #818181;
+        height: 350px;
+        width: 350px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+            .designer1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+ 
+            .designer2 {
+        position: absolute;
+        top: 260px;
+        left: 260px;
+        background-color: #b8b8b8;
+        height: 270px;
+        width: 270px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 40px 40px 100px 15px #ffffff;
+    }
+
+    .designer2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+ 
+    @media (max-width: 1300px) {
+            .designer1 {
+        top: 20px;
+        left: 60px;
+        height: 310px;
+        width: 310px;
+    }}
+
+    @media (max-width: 1200px) {
+            .designer1 {
+        top: 20px;
+        left: 20px;
+        height: 310px;
+        width: 310px;
+    }}
+ 
+    @media (max-width: 1300px) {
+            .designer2 {
+        top: 200px;
+        left: 260px;
+        height: 230px;
+        width: 230px;
+    }}
+
+    @media (max-width: 1200px) {
+            .designer2 {
+        top: 200px;
+        left: 200px;
+        height: 220px;
+        width: 220px;
+    }}
+
+    @media (max-width: 1000px) {
+    .designer1 {
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 40vw;
+        width: 40vw;
+        min-width: 240px;
+        min-height: 240px;
+    }}
+
+    @media (max-width: 1000px) {
+    .designer2 {
+        display: none;
+    }}
+ 
+    .destext1 {
+        position: absolute;
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+        font-size: 20px;
+        width: 44vw;
+        left: 34vw;
+        min-width: 350px;
+        margin-top: 110px;
+        color: #233660;
+        display: none;
+    }
+
+    .destext2 {
+        position: absolute;
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+        font-size: 23px;
+        width: 34vw;
+        left: 34vw;
+        margin-left: 120px;
+        min-width: 300px;
+        margin-top: 280px;
+        color: #233660;
+    }
+
+    @media (max-width: 1300px) {
+        .destext2 {
+        font-size: 20px;
+        width: 34vw;
+        left: 34vw;
+        margin-left: 100px;
+        min-width: 300px;
+        margin-top: 240px;
+    }}
+
+    @media (max-width: 1000px) {
+        .destext2 {
+        font-size: 20px;
+        color: #17253e;
+        margin-top: 570px;
+        z-index: 2;
+        left: 50%;
+        transform: translateX(-69%);
+        top: 33vw ;
+        margin-top: 260px;
+        
+        width: 540px;
+    }}
+
+    @media (max-width: 700px) {
+            .destext2 {
+        top: 230px;
+            }}
+
+    @media (max-width: 600px) {
+            .destext2 {
+        max-width: 450px;
+        left: 50%;
+        transform: translateX(-72%);
+            }}
+
+    .cont {
+        position: relative; /* Make this container the reference for absolutely positioned elements */
+        width: 100%;
+        top: 580px;
+    }
+    
+    #misija2 {
+        background-color: #233660;
+        height: 700px;
+    }
+    
+    @media (max-width: 1000px){
+    #misija2 {
+        background-color: #233660;
+        height: 870px;
+        margin-top: 270px;
+    }}
+
+    .Zimols {
+        position: absolute; /* Position on top of the cont_misija */
+        font-family:Garamond, serif;
+        font-size: 115px;
+        margin-top: 660px;
+    }
+    #misija {
+        margin-left: 70px;
+        color: #ffffff;
+        text-shadow: 10px 10px #17253e;
+        z-index: 2; 
+    }
+
+    @media(max-width:1000px){
+        #misija {
+        margin-top: 780px;
+    }
+    }
+
+    .Unico_L2 {
+        position: absolute; 
+        height: 350px;
+        box-shadow: 25px 25px #17253e;
+        top: 790px; 
+        right: 25vw;
+        margin-right: 70px;
+        z-index: 1; 
+    }
+
+    @media(max-width:1000px){
+        .Unico_L2 {
+    left: 50%;
+    transform: translateX(-55%);
+    margin-top: 470px;
+    }}
+
+    @media(max-width:670px){
+        .Unico_L2 {
+    margin-top: 500px;
+    }}
+
+        .Zimols p {
+    margin-bottom: -20px; /* Adjust this value to control the space */
+    }
+        .misijatext {
+        position: absolute;
+        border-radius: 10px;
+        font-size: 23px;
+        width: 34vw;
+        margin-top: 980px;
+        margin-left: 70px;
+        color: #ffffff;
+        z-index: 3;
+        }
+
+        @media (max-width: 1000px) {
+            .misijatext {
+        font-size: 23px;
+        top: 170px;
+        left: 50%;
+        transform: translateX(-60%);
+        width: 600px;
+        text-align: center;
+        }}
+
+        @media (max-width: 670px) {
+            .misijatext {
+        max-width: 450px;
+        transform: translateX(-63%);
+            }}
+
+        @media (max-width: 1300px) {
+            .Zimols {
+        font-size: 100px;
+        margin-top: 570px;
+    }}
+
+    @media (max-width: 1200px) {
+            .Zimols {
+        font-size: 95px;
+        margin-top: 590px;
+        margin-left: 40px;
+    }}
+
+    @media (max-width: 1300px) {
+        .Unico_L2 {
+        height: 320px;
+        top: 720px; 
+        margin-right: 40px;
+    }}
+
+    @media (max-width: 1200px) {
+        .Unico_L2 {
+            margin-right: 10px;
+    }}
+    
+
+        @media (max-width: 1300px) {
+            .cont {
+        top: 490px;
+        height: 640px;
+    }}
+
+    @media (max-width: 1300px) {
+        .misijatext {
+        font-size: 22px;
+        margin-top: 870px;
+        margin-left: 50px;
+        }}
+
+        #vertibas {
+        right: 25vw;
+        color: #ffffff;
+        text-shadow: 10px 10px #52302a ;
+        z-index: 2; 
+        }
+
+        @media (max-width: 1000px) {
+            #vertibas {
+        left: 10px;
+        margin-top: 520px;
+            }}
+
+            @media (max-width: 670px) {
+            #vertibas {
+        font-size: 70px;
+            }}
+        
+            @media (max-width: 500px) {
+            #vertibas {
+        font-size: 60px;
+            }}
+        
+        #vertibas2 {
+        background-color: #6e4038;
+        height: 1000px;
+        }
+
+    @media (max-width: 1000px){
+           #vertibas3 {
+        position: relative;
+        background-color: #6e4038;
+        height: 200px;
+        width: 100%;
+    }}
+
+        #name2 {
+        background-color: #f0ede7;
+        height: 490px;
+        }
+
+        @media (max-width: 1000px){
+            #name2 {
+        height: 560px;
+    }}
+
+    @media (max-width: 670px){
+            #name2 {
+        height: 460px;
+    }}
+
+        #name {
+        margin-left: 70px;
+        color: #233660;
+        z-index: 2; 
+        width: 400px;
+        }
+
+        @media (max-width: 1200px) {
+            #name {
+        margin-top: 580px;
+    }}
+
+    @media (max-width: 1000px) {
+            #name {
+        margin-top: 520px;
+        font-size: 90px;
+    }}
+
+    @media (max-width: 670px) {
+            #name {
+        font-size: 70px;
+        margin-left: 30px;
+    }}
+
+    @media (max-width: 500px) {
+            #name {
+        font-size: 60px;
+    }}
+
+        .zimolsT {
+        position: absolute;
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+        font-size: 25px;
+        width: 60vw;
+        margin-top: 900px;
+        margin-left: 70px;
+        color: #233660;
+        z-index: 3;
+        }
+
+        @media (max-width: 1300px) {
+            .zimolsT {
+        margin-top: 800px;
+        }}
+
+        @media (max-width: 1200px) {
+            .zimolsT {
+        margin-top: 780px;
+        }}
+
+        @media (max-width: 1000px) {
+            .zimolsT {
+        width: 570px;
+        margin-top: 760px;
+        margin-left: -40px;
+        left: 50%;
+        transform: translateX(-44%);
+        text-align: center;
+        }}
+
+        @media (max-width: 670px) {
+            .zimolsT {
+        width: 450px;
+        margin-top: 720px;
+        transform: translateX(-43%);
+        font-size: 22px;
+        }}
+
+        .verte {
+    position: absolute; 
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    width: 37vw;
+    margin-left: 34vw;
+    max-width: 470px;
+    }
+
+        #inovat {
+    top: 2180px;
+    left: -390px;
+    font-family:serif;
+    }
+
+        #elegant {
+    top: 2310px;
+    left: 110px;
+    font-family:serif;
+    }
+
+        #ilgi {
+    top: 2480px;
+    left: -350px;
+    max-width: none;
+    width: 42vw;
+    font-family:serif;
+    }
+
+    @media (max-width: 1300px) {
+        #inovat {
+    top: 2080px;
+    max-width: 430px;
+    left: -370px;
+    }}
+
+    @media (max-width: 1300px) {
+        #elegant {
+    top: 2200px;
+    max-width: 415px;
+    }}
+
+    @media (max-width: 1300px) {
+        #ilgi {
+    top: 2370px;
+    width: 40vw;
+    }}
+
+    @media (max-width: 1150px) {
+        #inovat {
+    left: -310px;
+    font-size: 22px;
+    }}
+
+    @media (max-width: 1150px) {
+        #elegant {
+    font-size: 22px;
+    left: 70px;
+    }}
+
+    @media (max-width: 1150px) {
+        #ilgi {
+    left: -300px;
+    font-size: 22px;
+    }}
+    
+    @media (max-width: 1000px) {
+        #inovat {
+    margin-left: 110px;
+    font-size: 24px;
+    top: 2580px;
+    width: 600px;
+    text-align: center;
+    left:50%;
+    transform: translateX(-70%);
+    max-width: none;
+    }}
+
+    @media (max-width: 1000px) {
+        #elegant {
+    margin-left: 110px;
+    font-size: 24px;
+    top: 2780px;
+    width: 600px;
+    text-align: center;
+    left:50%;
+    transform: translateX(-70%);
+    max-width: none;
+    }}
+
+    @media (max-width: 1000px) {
+        #ilgi {
+    margin-left: 110px;
+    font-size: 24px;
+    top: 2980px;
+    width: 600px;
+    text-align: center;
+    left:50%;
+    transform: translateX(-70%);
+    }}
+
+    @media (max-width: 670px) {
+        #inovat {
+    margin-left: 80px;
+    font-size: 22px;
+    top: 2440px;
+    width: 450px;
+    left:50%;
+    transform: translateX(-70%);
+    max-width: none;
+    }}
+
+    @media (max-width: 670px) {
+        #elegant {
+    margin-left: 80px;
+    font-size: 22px;
+    top: 2640px;
+    width: 450px;
+    left:50%;
+    transform: translateX(-70%);
+    max-width: none;
+    }}
+
+    @media (max-width: 670px) {
+        #ilgi {
+    margin-left: 80px;
+    font-size: 22px;
+    top: 2860px;
+    width: 450px;
+    left:50%;
+    transform: translateX(-70%);
+    }}
+
+        .verN {
+    position: absolute; 
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+    margin-left: 34vw;
+    z-index: 1;
+    text-shadow: 7px 7px #52302a;
+    }
+
+        #inovat1 {
+    top: 2090px;
+    left: -390px;
+    font-family:Garamond, serif;
+    }
+
+        #elegant1 {
+    top: 2220px;
+    left: 110px;
+    font-family:Garamond, serif;
+    }
+
+        #ilgi1 {
+    top: 2390px;
+    left: -350px;
+    font-family:Garamond, serif;
+    }
+
+    @media (max-width: 1300px) {
+        #inovat1 {
+    top: 2000px;
+    left: -370px;
+    }}
+
+    @media (max-width: 1300px) {
+        #elegant1 {
+    top: 2120px;
+    }}
+
+    @media (max-width: 1300px) {
+        #ilgi1 {
+    top: 2290px;
+    }}
+
+    @media (max-width: 1150px) {
+        #inovat1 {
+    left: -310px;
+    font-size: 54px;
+    top: 2015px;
+    }}
+
+    @media (max-width: 1150px) {
+        #elegant1 {
+    font-size: 54px;
+    top: 2135px;
+    left: 70px;
+    }}
+
+    @media (max-width: 1150px) {
+        #ilgi1 {
+    left: -300px;
+    font-size: 54px;
+    top: 2305px;
+    }}
+
+    @media (max-width: 1000px) {
+        #inovat1 {
+    margin-left: 110px;
+    font-size: 54px;
+    top: 2515px;
+    width: 600px;
+    text-align: center;
+    left:50%;
+    transform: translateX(-70%);
+    max-width: none;
+    }}
+
+    @media (max-width: 1000px) {
+        #elegant1 {
+    margin-left: 110px;
+    font-size: 54px;
+    top: 2715px;
+    width: 600px;
+    text-align: center;
+    left:50%;
+    transform: translateX(-70%);
+    max-width: none;
+    }}
+
+    @media (max-width: 1000px) {
+        #ilgi1 {
+    margin-left: 110px;
+    font-size: 54px;
+    top: 2915px;
+    width: 600px;
+    text-align: center;
+    left:50%;
+    transform: translateX(-70%);
+    }}
+
+    @media (max-width: 670px) {
+        #inovat1 {
+    font-size: 48px;
+    top: 2380px;
+    left:50%;
+    transform: translateX(-70%);
+    }}
+
+    @media (max-width: 670px) {
+        #elegant1 {
+    font-size: 48px;
+    top: 2580px;
+    left:50%;
+    transform: translateX(-70%);
+    }}
+
+    @media (max-width: 670px) {
+        #ilgi1 {
+    font-size: 48px;
+    top: 2800px;
+    left:50%;
+    transform: translateX(-70%);
+    }}
+
+    .web1 {
+            background-color: #6e4038;
+            height: 150px;
+            width: 80vw;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1000px) {
+            .web1 {
+            width: auto;
+        }}
+
+    </style>
+</head>
+<body>
+ 
+    <div class="header">
+        <img class= Unico_L id="logo" src="Unico.2.png" alt="Unico.Logo">
+      </div>
+ 
+    <div class="web" id="web">
+        <div class="desrow" id="desrow">
+            <div class="Laine" id="Line"> <p>MANI SAUC <br> LAINE</p> </div>
+        <div class="designer-cont" >
+            <div class="designer1" id="designer1">
+                <img src="face1.jpeg" alt="Designer 1">
+              </div>
+            <div class="designer2" id="designer2">
+                <img src="K3K.jpeg" alt="Designer 2">
+            </div>
+        </div>
+                <div class="destext1" id="destext1"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                </p> </div> 
+                <br><br>
+                <div class="destext2" id="destext2"> Šis tērps ir mana pārliecība un izjūta mākslā. Tas ir stāsts par eleganci, kas nav domāts, lai slēptu savu būtību, bet gan atspoguļo pašizpausmi, vajadzību justies pieņemtam un drosmi būt īstam. <br> <br>
+                    Es ticu, ka katrs no mums var būt drosmīgs, atbildīgs, lai paustu sevi. Būt pats. Tā ir attieksme, tā ir izvēle, un es izvēlos darīt.
+                </p></div>
+                <img class= Unico_L2 id="logo" src="Unico.1.png" alt="Unico.Logo">
+                <div class="misijatext" id="misijatext">Zīmola misija ir radīt apģērbu, kas apvieno eleganci, inovāciju un ilgtspējību, iedvesmojot cilvēkus izpausties sev patīkamā veidā un stilā, vienlaikus rūpējoties par vidi un nākotni.
+                </p></div>
+                <div class="Zimols" id="misija">
+                    <p>ZĪMOLA</p>
+                    <p>MISIJA</p>
+                </div>        
+                <div class="cont" id="misija2"></div>
+                <div class="zimolsT" id="zimolsT"> Zīmola logotipā pievienoti ziedu elementi, kas asociējas ar sievišķīgumu, simbolizējot maigumu, eleganci, dabiskumu un skaistumu. Apģērbā izmantoti elementi no plastmasas, kas vizuāli atgādina ziedus un var radīt asociācijas ar zīmolu.
+                </p></div>
+                <div class="Zimols" id="name">
+                    <p>ZĪMOLA</p><p>NOSAUKUMS</p>
+                </div> 
+                <div class="cont" id="name2"></div>
+                <div class="Zimols" id="vertibas">
+                    <p>ZĪMOLA</p>
+                    <p>VĒRTĪBAS</p>
+                </div>   
+                <div class="verte" id="inovat">Zīmols atspoguļo inovatīvu pieeju, savienojot eleganci ar otrreiz izmantotiem materiāliem, kas rada jaunu pieredzi un dizaina stilu.</div>
+                <div class="verte" id="elegant">Zīmols uzsver eleganci, jo apģērbs ir lielisks veids, kā izcelt katras sievietes skaistumu. Tiek radīti apģērbi, kas sniedz pārliecību un vienlaikus saglabā eleganci un ērtumu.</div>
+                <div class="verte" id="ilgi">Zīmola veidotais apģērbs ir ilgtspējīgs un rūpīgi radīts no kvalitatīviem otrreiz pārstrādātiem materiāliem. Materiāli un veids, kā tiek veidota kleita, ir videi draudzīgi. Tiek veidots modes apģērbs, kas ne tikai izskatās labi, bet arī rūpējas par vidi un klimata pārmaiņām.</div>
+
+                <div class="verN" id="inovat1"><p>INOVATĪVS</p></div>
+                <div class="verN" id="elegant1"><p>ELEGANTS</p></div>
+                <div class="verN" id="ilgi1"><p>ILGTSPĒJĪGS</p></div>
+                
+
+                <div class="cont" id="vertibas2"></div>
+                
+        </div></div>
+            <div class="container_slid">
+            <div class="slider" id="slider"></div></div>
+
+        <div class="web1"></div>
+    </div>
+ 
+    <script>
+        const slider = document.getElementById("slider");
+        const images = [
+            "K1.jpeg",
+            "K2.2.jpeg",
+            "K3.jpeg",
+            "K4.jpeg",
+            "K5.jpeg",
+        ];
+ 
+        function createSlides() {
+            [...images, ...images].forEach(imageUrl => { // Duplicate images
+                let slide = document.createElement("div");
+                slide.classList.add("slide");
+                slide.style.backgroundImage = `url(${imageUrl})`;
+                slider.appendChild(slide);
+            });
+        }
+ 
+        createSlides();
+ 
+        window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 30) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+        window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+            if (scrollY > 3000) {
+        document.body.style.backgroundColor = '#bdc1ca'; 
+            } else if (scrollY > 1600) {
+        document.body.style.backgroundColor = '#52322d';
+            } else if (scrollY > 1000) {
+        document.body.style.backgroundColor = '#e0d6c5';
+            } else if (scrollY > 200) {
+        document.body.style.backgroundColor = '#1b2947'; 
+            } else {
+        document.body.style.backgroundColor = '#bdc1ca'; // Original
+        }
+    });
+
+    function updateMargin() {
+  var element = document.getElementById("misija2");
+  
+  if (window.innerWidth <= 1000) {
+    element.style.marginTop = "270px";
+  } else {
+    element.style.marginTop = "0px";
+  }
+}
+
+// Run the function on page load
+window.onload = updateMargin;
+
+// Also, run the function when resizing the window
+window.onresize = updateMargin;
+ 
+    </script>
+ 
+</body>
+</html>
