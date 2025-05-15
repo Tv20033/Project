@@ -58,7 +58,7 @@
 
             @media (max-width: 500px) {
             .Laine {
-        font-size: 60px;
+        font-size: 50px;
             }}
 
         .container_slid {
@@ -171,7 +171,7 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             position: relative;
             z-index: 100;
-            transition: all 0.3s ease; /* smooth transition */
+            transition: all 0.3s ease; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -187,7 +187,7 @@
  
             .web, .container_slid {
             position: relative;
-            z-index: 1; /* This keeps them behind the header */
+            z-index: 1; 
         }
  
        .Unico_L {
@@ -195,8 +195,14 @@
             height: 150px;
             transition: all 0.3s ease;
             align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;;
        }
  
+       .Unico_L:hover {
+            transform:scale(1.1);
+        }
+
        .header.scrolled .Unico_L {
             height: 80px; /* shrink the logo */
         }
@@ -205,6 +211,11 @@
             .Unico_L {
         display: block;
         height: 100px;
+    }}
+
+    @media (max-width: 500px) {
+            .Unico_L {
+        height: 80px;
     }}
  
             .desrow {
@@ -359,6 +370,16 @@
         transform: translateX(-72%);
             }}
 
+    @media (max-width: 500px) {
+            .destext2 {
+        max-width: 300px;
+        font-size: 18px;
+        left: 50%;
+        transform: translateX(-85%);
+        top: 150px;
+        text-align: center;
+            }}
+
     .cont {
         position: relative; /* Make this container the reference for absolutely positioned elements */
         width: 100%;
@@ -377,12 +398,27 @@
         margin-top: 270px;
     }}
 
+    @media (max-width: 500px){
+    #misija2 {
+        height: 820px;
+        top: 420px;
+    }}
+
     .Zimols {
         position: absolute; /* Position on top of the cont_misija */
         font-family:Garamond, serif;
         font-size: 115px;
         margin-top: 660px;
     }
+
+    @media (max-width: 500px){
+    .Zimols {
+        position: absolute; /* Position on top of the cont_misija */
+        font-family:Garamond, serif;
+        font-size: 50px;
+        margin-top: 660px;
+    }}
+
     #misija {
         margin-left: 70px;
         color: #ffffff;
@@ -396,6 +432,15 @@
     }
     }
 
+    @media(max-width:500px){
+        #misija {
+        margin-top: 780px;
+        font-size: 60px;
+        left: 50%;
+        transform: translateX(-83%);
+        text-align: center;
+    }}
+
     .Unico_L2 {
         position: absolute; 
         height: 350px;
@@ -405,6 +450,18 @@
         margin-right: 70px;
         z-index: 1; 
     }
+
+    @media (max-width: 1300px) {
+        .Unico_L2 {
+        height: 320px;
+        top: 720px; 
+        margin-right: 40px;
+    }}
+
+    @media (max-width: 1200px) {
+        .Unico_L2 {
+            margin-right: 10px;
+    }}
 
     @media(max-width:1000px){
         .Unico_L2 {
@@ -416,6 +473,14 @@
     @media(max-width:670px){
         .Unico_L2 {
     margin-top: 500px;
+    }}
+
+    @media(max-width:500px){
+        .Unico_L2 {
+    margin-top: 430px;
+    left: 50%;
+    transform: translateX(-52%);
+    height: 290px;
     }}
 
         .Zimols p {
@@ -431,6 +496,13 @@
         color: #ffffff;
         z-index: 3;
         }
+
+        @media (max-width: 1300px) {
+        .misijatext {
+        font-size: 22px;
+        margin-top: 870px;
+        margin-left: 50px;
+        }}
 
         @media (max-width: 1000px) {
             .misijatext {
@@ -448,6 +520,14 @@
         transform: translateX(-63%);
             }}
 
+        @media (max-width: 500px) {
+            .misijatext {
+        max-width: 330px;
+        transform: translateX(-68%);
+        font-size: 18px;
+        top: 120px;
+            }}
+
         @media (max-width: 1300px) {
             .Zimols {
         font-size: 100px;
@@ -461,17 +541,7 @@
         margin-left: 40px;
     }}
 
-    @media (max-width: 1300px) {
-        .Unico_L2 {
-        height: 320px;
-        top: 720px; 
-        margin-right: 40px;
-    }}
-
-    @media (max-width: 1200px) {
-        .Unico_L2 {
-            margin-right: 10px;
-    }}
+    
     
 
         @media (max-width: 1300px) {
@@ -480,12 +550,7 @@
         height: 640px;
     }}
 
-    @media (max-width: 1300px) {
-        .misijatext {
-        font-size: 22px;
-        margin-top: 870px;
-        margin-left: 50px;
-        }}
+    
 
         #vertibas {
         right: 25vw;
@@ -538,6 +603,12 @@
         height: 460px;
     }}
 
+    @media (max-width: 500px){
+            #name2 {
+        height: 400px;
+        top: 420px;
+    }}
+
         #name {
         margin-left: 70px;
         color: #233660;
@@ -564,7 +635,11 @@
 
     @media (max-width: 500px) {
             #name {
-        font-size: 60px;
+        font-size: 50px;
+        left: 50%;
+        transform: translateX(-59%);
+        text-align:center ;
+        margin-top: 497px;
     }}
 
         .zimolsT {
@@ -605,6 +680,14 @@
         margin-top: 720px;
         transform: translateX(-43%);
         font-size: 22px;
+        }}
+
+        @media (max-width: 500px) {
+            .zimolsT {
+        width: 330px;
+        margin-top: 630px;
+        transform: translateX(-39%);
+        font-size: 18px;
         }}
 
         .verte {
@@ -881,7 +964,7 @@
 <body>
  
     <div class="header">
-        <img class= Unico_L id="logo" src="Unico.2.png" alt="Unico.Logo">
+        <img class="Unico_L" id="logo" src="Unico.2.png" alt="Unico Logo" onclick="scrollAndReload()">
       </div>
  
     <div class="web" id="web">
@@ -997,6 +1080,11 @@ window.onload = updateMargin;
 
 // Also, run the function when resizing the window
 window.onresize = updateMargin;
+
+  function scrollAndReload() {
+    // Scroll to the top of the page smoothly
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
  
     </script>
  
