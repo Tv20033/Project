@@ -102,6 +102,11 @@
         height: 3300px;
         }}
 
+        @media (max-width: 500px) {
+            .web{
+        height: 3100px;
+        }}
+
  
         /* Slīdošo attēlu konteiners */
         .slider {
@@ -192,15 +197,20 @@
  
        .Unico_L {
             display: block;
-            height: 150px;
+            height: 120px;
             transition: all 0.3s ease;
             align-items: center;
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.3s ease;;
+            margin: 5px;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
        }
- 
-       .Unico_L:hover {
-            transform:scale(1.1);
+
+       .Unico_L.scaled {
+            transform: scale(1.1);
+        }
+
+        .Unico_L {
+             transition: transform 0.1s ease;
         }
 
        .header.scrolled .Unico_L {
@@ -550,8 +560,6 @@
         height: 640px;
     }}
 
-    
-
         #vertibas {
         right: 25vw;
         color: #ffffff;
@@ -565,14 +573,18 @@
         margin-top: 520px;
             }}
 
-            @media (max-width: 670px) {
+        @media (max-width: 670px) {
             #vertibas {
         font-size: 70px;
             }}
         
             @media (max-width: 500px) {
             #vertibas {
-        font-size: 60px;
+        font-size: 55px;
+        left: 50%;
+        transform: translateX(-70%);
+        text-align: center;
+        right: auto;
             }}
         
         #vertibas2 {
@@ -580,13 +592,12 @@
         height: 1000px;
         }
 
-    @media (max-width: 1000px){
-           #vertibas3 {
-        position: relative;
+        @media (max-width: 500px) {
+        #vertibas2 {
         background-color: #6e4038;
-        height: 200px;
-        width: 100%;
-    }}
+        height: 1000px;
+        top: 420px ;
+        }}
 
         #name2 {
         background-color: #f0ede7;
@@ -824,6 +835,35 @@
     transform: translateX(-70%);
     }}
 
+    @media (max-width: 500px) {
+        #inovat {
+    font-size: 18px;
+    top: 2260px;
+    width: 330px;
+    left:50%;
+    transform: translateX(-77%);
+    max-width: none;
+    }}
+
+    @media (max-width: 500px) {
+        #elegant {
+    font-size: 18px;
+    top: 2460px;
+    width: 330px;
+    left:50%;
+    transform: translateX(-77%);
+    max-width: none;
+    }}
+
+    @media (max-width: 500px) {
+        #ilgi {
+    font-size: 18px;
+    top: 2660px;
+    width: 330px;
+    left:50%;
+    transform: translateX(-77%);
+    }}
+
         .verN {
     position: absolute; 
     font-size: 70px;
@@ -947,6 +987,24 @@
     transform: translateX(-70%);
     }}
 
+    @media (max-width: 500px) {
+        #inovat1 {
+    font-size: 35px;
+    top: 2200px;
+    }}
+
+    @media (max-width: 500px) {
+        #elegant1 {
+    font-size: 35px;
+    top: 2400px;
+    }}
+
+    @media (max-width: 500px) {
+        #ilgi1 {
+    font-size: 35px;
+    top: 2600px;
+    }}
+
     .web1 {
             background-color: #6e4038;
             height: 150px;
@@ -957,6 +1015,11 @@
         @media (max-width: 1000px) {
             .web1 {
             width: auto;
+        }}
+
+        @media (max-width: 500px) {
+            .web1 {
+            height: 100px;
         }}
 
     </style>
@@ -996,7 +1059,8 @@
                 <div class="zimolsT" id="zimolsT"> Zīmola logotipā pievienoti ziedu elementi, kas asociējas ar sievišķīgumu, simbolizējot maigumu, eleganci, dabiskumu un skaistumu. Apģērbā izmantoti elementi no plastmasas, kas vizuāli atgādina ziedus un var radīt asociācijas ar zīmolu.
                 </p></div>
                 <div class="Zimols" id="name">
-                    <p>ZĪMOLA</p><p>NOSAUKUMS</p>
+                    <p>ZĪMOLA</p>
+                    <p>NOSAUKUMS</p>
                 </div> 
                 <div class="cont" id="name2"></div>
                 <div class="Zimols" id="vertibas">
@@ -1085,7 +1149,34 @@ window.onresize = updateMargin;
     // Scroll to the top of the page smoothly
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
- 
+
+  const button = document.querySelector('.Unico_L');
+
+    // Hover for desktop
+  button.addEventListener('mouseenter', () => {
+    button.classList.add('scaled');
+  });
+  button.addEventListener('mouseleave', () => {
+    button.classList.remove('scaled');
+  });
+
+    // Touch support for mobile
+  button.addEventListener('touchstart', () => {
+    button.classList.add('scaled');
+  });
+
+  button.addEventListener('touchend', () => {
+    button.classList.remove('scaled');
+  });
+
+    // Handle mouse clicks
+  button.addEventListener('mousedown', () => {
+    button.classList.add('scaled');
+  });
+  button.addEventListener('mouseup', () => {
+    button.classList.remove('scaled');
+  });
+
     </script>
  
 </body>
